@@ -1,5 +1,5 @@
 const express = require('express')
-const port = 3000
+const port = 3000 
 const morgan = require('morgan')
 const { engine } = require ('express-handlebars')
 const app = express();
@@ -21,6 +21,6 @@ app.set('views', path.join(__dirname, 'views'));
 db.connect();
 
 // console.log(__dirname/layouts);
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)
 })
